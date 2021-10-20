@@ -1,0 +1,84 @@
+{%extends "base.html"%}
+{%block content%}
+<div class="main_container background_image">
+<div class="container">
+    <div class="info">
+        <div class="disease_name">
+            <h3>Diabetes Disease</h3> 
+        </div>    
+        <p>Please Give All values in number Formate</p>
+    </div>
+
+    <form method="POST">
+        <div class="input-group flex-nowrap mb-3">
+            <span for="gender" class="input-group-text">Pregnancies</span>
+            <input type="text" class="form-control" placeholder="Number of times pregnant" name="Pregnancies"
+                id="Pregnancies">
+        </div>
+
+        <div class="input-group flex-nowrap mb-3">
+            <span for="Glucose" class="input-group-text">Glucose</span>
+            <input type="text" class="form-control" placeholder="Plasma glucose concentration a 2 hours in an oral glucose tolerance test" name="Glucose" id="Glucose">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="BloodPressure" class="input-group-text">BloodPressure</span>
+            <input type="text" class="form-control" placeholder="Diastolic blood pressure (mm Hg)" name="BloodPressure" id="BloodPressure">
+        </div>
+
+        <div class="input-group flex-nowrap mb-3">
+            <span for="SkinThickness" class="input-group-text">SkinThickness</span>
+            <input type="text" class="form-control" placeholder="Triceps skin fold thickness (mm)" name="SkinThickness" id="SkinThickness">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="Insulin" class="input-group-text">Insulin</span>
+            <input type="text" class="form-control" placeholder="2-Hour serum insulin (mu U/ml)" name="Insulin" id="Insulin">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="bmi" class="input-group-text">BMI</span>
+            <input type="text" class="form-control" placeholder="Body mass index (weight in kg/(height in m)^2)" name="bmi" id="bmi">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="DiabetesPedigreeFunction" class="input-group-text">Diabetes Pedigree Function</span>
+            <input type="text" class="form-control" placeholder="Diabetes pedigree function" name="DiabetesPedigreeFunction"
+                id="DiabetesPedigreeFunction">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="Age" class="input-group-text">Age</span>
+            <input type="text" class="form-control" placeholder="Enter your age (years)" name="Age" id="Age">
+        </div>
+        <button type="submit" class="btn btn-primary">Let's Predict</button>
+    </form>
+</div>
+
+<style>
+    .background_image {
+        background-image: url('static/m3.jpg');
+        background-color: #cccccc;
+        background-size: cover;
+    } 
+    .input_box,.form-control{
+        background: transparent;
+        border: none;
+        color: rgb(3, 1, 1);
+    }
+    .input-group-text{
+        background: rgb(226, 205, 113);
+        border: none;
+        border-radius: 25px;
+
+    }
+  </style>
+{%endblock%}
+{%block content1%}
+    {% if value == 1 %}
+    <h2>
+        Prediction: You have Chances of Diabetes Disease.
+    </h2>
+    {% else %}
+    <h2>
+        Prediction: You have not Chances of Diabetes Disease.
+    </h2>
+    {% endif %}
+
+{%endblock%}
+</div>

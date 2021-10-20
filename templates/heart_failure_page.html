@@ -1,0 +1,98 @@
+
+{%extends "base.html"%}
+{%block content%}
+<div class="main_container background_image">
+<div class="container ">
+    <div class="info">
+        <div class="disease_name">
+            <h3>Heart Failure Detection</h3> 
+        </div>    
+        <p>Please Give All values in number Formate</p>
+    </div>
+
+    <form method="POST">
+        <div class="input-group flex-nowrap mb-3">
+            <span for="Age" class="input-group-text">Age</span>
+            <input type="text" class="form-control input_box" placeholder="Enter your age" name="Age" id="Age">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="anaemia" class="input-group-text">anaemia</span>
+            <input type="text" class="form-control" placeholder="Decrease of red blood cells or hemoglobin 1 for yes and 0 for no" name="anaemia" id="anaemia">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="creatinine_phosphokinase" class="input-group-text">creatinine phosphokinase</span>
+            <input type="text" class="form-control" placeholder="Level of the CPK enzyme in the blood (mcg/L)" name="creatinine_phosphokinase" id="creatinine_phosphokinase">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="diabetes" class="input-group-text">diabetes</span>
+            <input type="text" class="form-control" placeholder="patient has diabetes:1 for yes and 0 for no" name="diabetes" id="diabetes">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="ejection_fraction" class="input-group-text">ejection fraction</span>
+            <input type="text" class="form-control" placeholder="Percentage of blood leaving the heart at each contraction (percentage)" name="ejection_fraction" id="ejection_fraction">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="high_blood_pressure" class="input-group-text">high blood pressure</span>
+            <input type="text" class="form-control" placeholder="patient has hypertension:1 for yes and 0 for no" name="high_blood_pressure" id="high_blood_pressure">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="platelets" class="input-group-text"> platelets</span>
+            <input type="text" class="form-control" placeholder="Platelets in the blood (kiloplatelets/mL)" name="platelets" id="platelets">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="serum_creatinine" class="input-group-text">serum creatinine</span>
+            <input type="text" class="form-control" placeholder="Level of serum creatinine in the blood (mg/dL)" name="serum_creatinine" id="serum_creatinine">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="serum_sodium" class="input-group-text">serum sodium</span>
+            <input type="text" class="form-control" placeholder="Level of serum sodium in the blood (mEq/L)" name="serum_sodium" id="serum_sodium">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="gender" class="input-group-text">Gender</span>
+            <input type="text" class="form-control" placeholder="Enter 0 for male and 1 for female" name="gender"
+                id="gender">
+         </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="smoke" class="input-group-text">Smoking</span>
+            <input type="text" class="form-control" placeholder="1 for Yes and 0 For No" name="smoke" id="smoke">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="time" class="input-group-text">time</span>
+            <input type="text" class="form-control" placeholder="Follow-up period (days)" name="time" id="time">
+        </div>
+        <button type="submit" class="btn btn-primary">Let's Predict</button>
+    </form>
+</div>
+
+<style>
+    .background_image {
+        background-image: url('static/m11.jpg');
+        background-color: #cccccc;
+        background-size: cover;
+    } 
+    .input_box,.form-control{
+        background: transparent;
+        border: none;
+        color: rgb(8, 4, 4);
+    }
+    .input-group-text{
+        background: rgb(226, 205, 113);
+        border: none;
+        border-radius: 25px;
+
+    }
+
+  </style>
+{%endblock%}
+{%block content1%}
+    {% if value == 1 %}
+    <h2>
+        Prediction: You have Chances of Heart Disease.
+    </h2>
+    {% else %}
+    <h2>
+        Prediction: You have not Chances of Heart Disease.
+    </h2>
+    {% endif %}
+
+{%endblock%}</div>

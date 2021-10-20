@@ -1,0 +1,98 @@
+{%extends "base.html"%}
+{%block content%}
+<div class="main_container background_image">
+<div class="container">
+    <div class="info">
+        <div class="disease_name">
+            <h3>Cardiovascular Disease</h3> 
+        </div>    
+        <p>Please Give All values in number Formate</p>
+    </div>
+
+    <form method="POST">
+        <div class="input-group flex-nowrap mb-3">
+            <span for="Age" class="input-group-text">Age</span>
+            <input type="text" class="form-control" placeholder="Enter your age" name="Age" id="Age">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="gender" class="input-group-text">Gender</span>
+            <input type="text" class="form-control" placeholder="Enter 0 for male and 1 for female" name="gender"
+                id="gender">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="height" class="input-group-text">Height</span>
+            <input type="text" class="form-control" placeholder="Give your height in cm" name="height" id="height">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="weight" class="input-group-text">Weight</span>
+            <input type="text" class="form-control" placeholder="Give your Weight in Kg" name="weight" id="weight">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="bmi" class="input-group-text">BMI</span>
+            <input type="text" class="form-control" placeholder="Give your bmi value" name="bmi" id="bmi">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="ap_hi" class="input-group-text">Systolic blood pressure</span>
+            <input type="text" class="form-control" placeholder="Give Higher Blood Pressure" name="ap_hi" id="ap_hi">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="ap_lo" class="input-group-text">Diastolic blood pressure</span>
+            <input type="text" class="form-control" placeholder="Give Lower Blood Pressure" name="ap_lo" id="ap_lo">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="cholesterol" class="input-group-text">cholesterol Level</span>
+            <input type="text" class="form-control" placeholder="Enter 1 for normal, 2 for above normal and 3 for well above normal" name="cholesterol"
+                id="cholesterol">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="gluc" class="input-group-text">Glucose Level</span>
+            <input type="text" class="form-control" placeholder="Enter 1 for normal, 2 for above normal and 3 for well above normal" name="gluc" id="gluc">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="smoke" class="input-group-text">Smoking</span>
+            <input type="text" class="form-control" placeholder="1 for Yes and 0 For No" name="smoke" id="smoke">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="alco" class="input-group-text">Alcohol intake</span>
+            <input type="text" class="form-control" placeholder="1 for Yes and 0 For No" name="alco" id="alco">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="active" class="input-group-text">Physical activity</span>
+            <input type="text" class="form-control" placeholder="1 for Yes and 0 For No" name="active" id="active">
+        </div>
+        <button type="submit" class="btn btn-primary">Let's Predict</button>
+    </form>
+</div>
+
+<style>
+    .background_image {
+        background-image: url('static/m.jpg');
+        background-color: #cccccc;
+        background-size: cover;
+    } 
+    .input_box,.form-control{
+        background: transparent;
+        border: none;
+        color: rgb(8, 4, 4);
+    }
+    .input-group-text{
+        background: rgb(226, 205, 113);
+        border: none;
+        border-radius: 25px;
+
+    }
+  </style>
+{%endblock%}
+{%block content1%}
+    {% if value == 1 %}
+    <h2>
+        Prediction: You have Chances of Cardiovascular Disease.
+    </h2>
+    {% else %}
+    <h2>
+        Prediction: You have not Chances of Cardiovascular Disease.
+    </h2>
+    {% endif %}
+
+{%endblock%}
+</div>

@@ -1,0 +1,102 @@
+<!-- age	sex	cp	trestbps	chol	fbs	restecg	thalach	exang	oldpeak	slope	ca	thal	target -->
+{%extends "base.html"%}
+{%block content%}
+<div class="main_container background_image">
+<div class="container">
+    <div class="info">
+        <div class="disease_name">
+            <h3>Heart Disease</h3> 
+        </div>    
+        <p>Please Give All values in number Formate</p>
+    </div>
+
+    <form method="POST">
+        <div class="input-group flex-nowrap mb-3">
+            <span for="Age" class="input-group-text">Age</span>
+            <input type="text" class="form-control" placeholder="Enter your age" name="Age" id="Age">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="gender" class="input-group-text">Gender</span>
+            <input type="text" class="form-control" placeholder="Enter 0 for male and 1 for female" name="gender"
+                id="gender">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="cp" class="input-group-text">Chest Pain</span>
+            <input type="text" class="form-control" placeholder="1 for typical angina ,2 for atypical angina ,3 for non-anginal pain, 4 for asymptomatic" name="cp" id="cp">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="trtbps" class="input-group-text">Resting Blood Pressure</span>
+            <input type="text" class="form-control" placeholder="In mm Hg" name="trtbps" id="trtbps">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="chol" class="input-group-text">serum cholestoral</span>
+            <input type="text" class="form-control" placeholder="Give value in mg/dl" name="chol" id="chol">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="fbs" class="input-group-text">fasting blood sugar</span>
+            <input type="text" class="form-control" placeholder="Is fbs > 120 mg/dl then 1 = true otherwise 0 = false" name="fbs" id="fbs">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="restecg" class="input-group-text">Resting ElectroCardioGraphic</span>
+            <input type="text" class="form-control" placeholder="0 = normal, 1 = ST-T wave abnormality, 2 = left ventricular hyperthrophy" name="restecg" id="restecg">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="thalach" class="input-group-text"> Max heart rate</span>
+            <input type="text" class="form-control" placeholder="Enter Max heart rate reading" name="thalach" id="thalach">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="Exercise" class="input-group-text">Exercise</span>
+            <input type="text" class="form-control" placeholder="1 = yes, 0 = no" name="Exercise" id="Exercise">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="oldpeak" class="input-group-text">ST Depression</span>
+            <input type="text" class="form-control" placeholder="1 for Yes and 0 For No" name="oldpeak" id="oldpeak">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="slope" class="input-group-text">Peak exercise</span>
+            <input type="text" class="form-control" placeholder="1 = upsloping, 2 = flat, 3 = downsloping" name="slope" id="slope">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="ca" class="input-group-text">major vessels</span>
+            <input type="text" class="form-control" placeholder="(0–3) colored" name="ca" id="ca">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="Thalassemia" class="input-group-text">Thalassemia</span>
+            <input type="text" class="form-control" placeholder="1 for Yes and 0 For No" name="Thalassemia" id="Thalassemia">
+        </div>
+        <button type="submit" class="btn btn-primary">Let's Predict</button>
+    </form>
+</div>
+
+
+<style>
+    .background_image {
+        background-image: url('static/m1.jpg');
+        background-color: #cccccc;
+        background-size: cover;
+    } 
+    .input_box,.form-control{
+        background: transparent;
+        border: none;
+        color: rgb(8, 4, 4);    }
+    .input-group-text{
+        background: rgb(226, 205, 113);
+        border: none;
+        border-radius: 25px;
+
+    }
+  </style>
+{%endblock%}
+{%block content1%}
+    {% if value == 1 %}
+    <h2>
+        Prediction: You have Chances of Heart Disease.
+    </h2>
+    {% else %}
+    <h2>
+        Prediction: You have not Chances of Heart Disease.
+    </h2>
+    {% endif %}
+
+{%endblock%}
+</div>
