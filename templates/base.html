@@ -32,12 +32,16 @@
                   Disease Prediction
                 </a>
                 <ul class="dropdown-menu " style="background: #1e2220;border-top: gray 2px solid; "  aria-labelledby="navbarScrollingDropdown">
-                    <a class="nav-link" style="color: rgb(245, 186, 115);" href="{{ url_for('cardiovascular_predict') }}">Cardiovascular Disease</a>
-                    <a class="nav-link" style="color: rgb(245, 186, 115);" href="{{ url_for('heart_predict') }}">Heart Disease</a>
-                    <a class="nav-link"  style="color: rgb(245, 186, 115);" href="{{ url_for('heart_failure_predict') }}">Heart Failure Predict</a>
-                    <a class="nav-link"  style="color: rgb(245, 186, 115);" href="{{ url_for('diabetes_disease_predict') }}">Diabetes Disease Predict</a>
+                    <a class="nav-link" style="color: rgb(245, 186, 115);" href="{{ url_for('cardiovascular_predict') }}">Cardiovascular Disease Prediction</a>
+                    <a class="nav-link" style="color: rgb(245, 186, 115);" href="{{ url_for('heart_predict') }}">Heart Disease Prediction</a>
+                    <a class="nav-link"  style="color: rgb(245, 186, 115);" href="{{ url_for('heart_failure_predict') }}">Heart Failure Prediction</a>
+                    <a class="nav-link"  style="color: rgb(245, 186, 115);" href="{{ url_for('stroke_disease_predict') }}">Stroke Prediction</a>
+                    <a class="nav-link"  style="color: rgb(245, 186, 115);" href="{{ url_for('diabetes_disease_predict') }}">Diabetes Prediction</a>
                     
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}">About</a>
               </li>
             </ul>
             <form class="d-flex">
@@ -50,9 +54,12 @@
 
     {% block content%} {% endblock %}
     {%block content1%} {%endblock%}
+    {%block main_content%} {%endblock%}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
+    {%block footer%} {%endblock%}
+    {%block footer1%} {%endblock%}
 </body>
 
 </html>

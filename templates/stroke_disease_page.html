@@ -1,0 +1,91 @@
+
+{%extends "base.html"%}
+{%block content%}
+<div class="main_container background_image">
+<div class="container ">
+    <div class="info">
+        <div class="disease_name">
+            <h3>Stroke prediction</h3> 
+        </div>    
+        <p>Please Give All values in number Formate</p>
+    </div>
+    <form method="POST">
+        <div class="input-group flex-nowrap mb-3">
+            <span for="Age" class="input-group-text">Age</span>
+            <input type="text" class="form-control input_box" placeholder="Enter your age" name="Age" id="Age">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="hypertension" class="input-group-text">Hypertension</span>
+            <input type="text" class="form-control" placeholder="0 if the patient doesn't have hypertension, 1 if the patient has hypertension" name="hypertension" id="hypertension">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="heart_disease" class="input-group-text">Heart disease</span>
+            <input type="text" class="form-control" placeholder="0 if the patient doesn't have any heart diseases, 1 if the patient has a heart disease" name="heart_disease" id="heart_disease">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="work_type" class="input-group-text">Work Type</span>
+            <input type="text" class="form-control" placeholder="Enter 0 for Govt-job or 1 for Never worked or 2 for Private or 3 for Self-employed or 4 for children" name="work_type" id="work_type">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="avg_glucose_level" class="input-group-text">Average Glucose Level</span>
+            <input type="text" class="form-control" placeholder="average glucose level in blood" name="avg_glucose_level" id="avg_glucose_level">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="bmi" class="input-group-text">BMI</span>
+            <input type="text" class="form-control" placeholder="body mass index" name="bmi" id="bmi">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="gender_Male" class="input-group-text"> Gender</span>
+            <input type="text" class="form-control" placeholder="Enter 0 for female or 1 for male" name="gender_Male" id="gender_Male">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="ever_married" class="input-group-text">Ever Married</span>
+            <input type="text" class="form-control" placeholder="Enter 0 for No or 1 for Yes" name="ever_married" id="ever_married">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="Residence_type_Urban" class="input-group-text">Residence Type</span>
+            <input type="text" class="form-control" placeholder="Enter 0 for Rural or 1 for Urban" name="Residence_type_Urban" id="Residence_type_Urban">
+        </div>
+        <div class="input-group flex-nowrap mb-3">
+            <span for="smoking_status" class="input-group-text">smoking_status</span>
+            <input type="text" class="form-control" placeholder="Enter 0 for formerly smoked or 1 for never smoked or 2 for smokes" name="smoking_status" id="smoking_status">
+        </div>
+        <button type="submit" class="btn btn-primary">Let's Predict</button>
+    </form>
+</div>
+
+<style>
+    .background_image {
+        background-image: url('static/m2.jpg');
+        background-color: #cccccc;
+        background-size: cover;
+    } 
+    .input_box,.form-control{
+        background: transparent;
+        border: none;
+        color: rgb(8, 4, 4);
+    }
+    .input-group-text{
+        background: rgb(226, 205, 113);
+        border: none;
+        border-radius: 25px;
+    }
+
+  </style>
+
+{%endblock%}
+{%block content1%}
+    {% if value == 1 %}
+    <h2>
+        Prediction: You have Chances of Stroke .
+    </h2>
+    {% else %}
+    <h2>
+        Prediction: You have not Chances of Stroke.
+    </h2>
+    {% endif %}
+
+{%endblock%}</div>
+
+
+

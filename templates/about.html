@@ -1,0 +1,63 @@
+{%extends "base.html"%}
+{%block content%}
+<div class="about">
+   
+      <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidth" aria-expanded="false" aria-controls="collapseWidthExample">
+          Tap to Know about Sazzad
+        </button>
+      </p>
+      <div style="min-height: 120px;">
+        <div class="collapse collapse-horizontal" id="collapseWidth">
+          <div class="card card-body" style="width: 1100px;">
+            <pre>
+            Hi I'm Mohammad Sazzad Hossain, student of Daffodil International University.
+            Currently I'm working on Machine Learning.Connect with me and keep me in your prayer.
+            <a href="https://www.linkedin.com/in/md-sazzad-hossain-ab1080174/"> My LinkedIn Profile </a>
+            <a href="https://github.com/sazzad15-1779">Project GitHub Link</a>
+        </pre>
+        </div>
+        </div>
+      </div>
+      <p>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthEx" aria-expanded="false" aria-controls="collapseWidthExample">
+          Tap to Know about This Project
+        </button>
+      </p>
+      <div style="min-height: 120px;">
+        <div class="collapse collapse-horizontal" id="collapseWidthEx">
+          <div class="card card-body" style="width: 1100px;">
+            <pre>
+            This Project is a sample of machine learning based web project. Here I predict some chronical diseases 
+            which dataset collected from kaggle website. I used python language to preprocess and create model of 
+            diseases. I tried to get the optimal model to predict the diseases.I used flask web framework to turn 
+            this project as a website.After That i published it in Heroku platform.
+
+            <a href="https://github.com/sazzad15-1779">Project GitHub Link</a>
+        </pre>
+        </div>
+        </div>
+      </div>
+</div>
+
+<style>
+    .about {
+        background-image: url('static/my_image_4.jpg');
+        background-color: #cccccc;
+        background-size: cover;
+        height: 1000px;
+    }
+    a{
+        color: green;
+    }
+    .card{
+        text-align: left;
+        background: none;
+        border: none;
+    }
+    pre{
+        background: none;
+    }
+  
+  </style>
+  {%endblock%}
